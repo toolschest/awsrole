@@ -37,7 +37,7 @@ func main() {
 		fmt.Println("Configuration doesn't exist with the environment name provided")
 		os.Exit(1)
 	}
-	currentTime := (time.Now()).Unix()
+	currentTime := time.Now().Unix()
 	sessionName := *username + strconv.FormatInt(currentTime, 16)
 	serialNumber := "arn:aws:iam::" + *config.MasterAccountID + ":mfa/" + *username
 	assumedRole, err := assumeRole(arn, &sessionName, &serialNumber, mfa)
