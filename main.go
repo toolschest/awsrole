@@ -13,7 +13,7 @@ func main() {
 	mfa := flag.String("mfa", "000000", "MFA token for login")
 	flag.Parse()
 	var configPath string
-	homeDir, err := os.UserHomeDir()
+	homeDir, _ := os.UserHomeDir()
 	if _, err := os.Stat(os.Getenv("AWS_ASSUMEROLE_CONFIG")); err == nil {
 		configPath = os.Getenv("AWS_ASSUMEROLE_CONFIG")
 	} else if _, err := os.Stat(homeDir + "/.aws/assumerole.yml"); err == nil {

@@ -8,13 +8,13 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/sts"
 )
 
-type STSAssumeRoleAPI interface {
+type stsAssumeRoleAPI interface {
 	AssumeRole(ctx context.Context,
 		params *sts.AssumeRoleInput,
 		optFns ...func(*sts.Options)) (*sts.AssumeRoleOutput, error)
 }
 
-func takeRole(c context.Context, api STSAssumeRoleAPI, input *sts.AssumeRoleInput) (*sts.AssumeRoleOutput, error) {
+func takeRole(c context.Context, api stsAssumeRoleAPI, input *sts.AssumeRoleInput) (*sts.AssumeRoleOutput, error) {
 	return api.AssumeRole(c, input)
 }
 

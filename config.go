@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"os"
 
 	"gopkg.in/yaml.v3"
 )
 
+// Role contains assume role config
 type Role struct {
 	Username    *string `yaml:"username"`
 	Environment *string `yaml:"environment"`
@@ -14,13 +15,14 @@ type Role struct {
 	Region      *string `yaml:"region"`
 }
 
+// Config has root config
 type Config struct {
 	MasterAccountID *string `yaml:"master_account_id"`
 	Roles           map[string]Role
 }
 
 func (config *Config) buildConfig(filename string) error {
-	buffer, err := ioutil.ReadFile(filename)
+	buffer, err := os.ReadFile(filename)
 	if err != nil {
 		return nil
 	}
