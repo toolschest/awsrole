@@ -7,6 +7,12 @@
 
 Requires AWS CLI tools to be pre-installed.
 
+On MacOS:
+```sh
+brew tap toolschest/toolschest
+brew install awsrole
+```
+
 Add alias in your .zshrc or .bashrc
 ```sh
 alias awsrole='function(){output=$(command awsrole $@);if [ $? -eq 0 ]; then eval $output; else echo $output; fi}'
