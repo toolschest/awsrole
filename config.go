@@ -9,10 +9,9 @@ import (
 
 // Role contains assume role config
 type Role struct {
-	Username    *string `yaml:"username"`
-	Environment *string `yaml:"environment"`
-	RoleARN     *string `yaml:"role_arn"`
-	Region      *string `yaml:"region"`
+	Username *string `yaml:"username"`
+	RoleARN  *string `yaml:"role_arn"`
+	Region   *string `yaml:"region"`
 }
 
 // Config has root config
