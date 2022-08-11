@@ -31,12 +31,10 @@ Environment variable has precedence over home directory path.
 master_account_id: {master_account_id}
 roles:
   production:
-    environment: production
     username: developer
     role_arn: arn:aws:iam::{account_id}:role/Developer
     region: us-west-2
   sandbox:
-    environment: sandbox
     username: developer
     role_arn: arn:aws:iam::{account_id}:role/Developer
     region: us-west-2
@@ -48,7 +46,7 @@ roles:
 awsrole --help
 awsrole --env sandbox --mfa 123456
 OR
-awsrole -e production -mfa 123456
+awsrole -env production -mfa 123456
 ```
 
 ## License
