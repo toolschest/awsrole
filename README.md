@@ -1,4 +1,4 @@
-# AWS Assume Role
+# AWS Assume Role with MFA token
 
 ##### Features:
 - Easily switch roles with yaml configuration using mfa token.

@@ -18,10 +18,10 @@ universal_binaries:
 brews:
   -
     name: awsrole
-    homepage: https://github.com/uztools/awsrole
+    homepage: https://github.com/toolschest/awsrole
     tap:
-      owner: uztools
-      name: homebrew-uztools
+      owner: toolschest
+      name: homebrew-toolschest
     commit_author:
       name: uzair_y3k
       email: uzair_y3k@live.com
